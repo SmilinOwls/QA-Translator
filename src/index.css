@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  --color-background: #FAFAFA;
+  --color-foreground: #2c2a2a;
+  --color-shadow: #AAA;
+  
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body.dark {
+  --color-background: #2c2a2a;
+  --color-foreground: #EFEFEF;
+  --color-shadow: rgba(0, 0, 0 , 0.8);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+select {
+  padding: 0.4em;
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 150px !important;
+  padding: 0.7em;
+}
+
+button,
+select {
+  border-radius: 8px !important;
+  font-size: 1em;
+  transition: border-color 0.25s;
+  border: 1px solid transparent;
+}
+
+select{
+  background-color: #90918d8b;
+  color: var(--color-foreground);
+}
+
+button {
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px;
+  color: var(--color-foreground) !important;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color:rgba(197, 195, 195, 0.87) !important;
+  background-color: #989898 !important;
+}
+
+select:hover,
+textarea:hover {
+  border-color: #646cff;
+}
+
+textarea:read-only{
+  background-color: #dddbdb;
+}
+
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.active{
+  color: var(--color-foreground) !important;
+}
+
+.list-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.list-group-item{
+  color:rgba(136, 134, 134, 0.87);
+  cursor: pointer;
+}
